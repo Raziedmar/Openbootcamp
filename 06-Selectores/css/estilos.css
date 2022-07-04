@@ -1,0 +1,10 @@
+.seudoelemento::before {content:"Pasa por encima";}
+.seudoelemento:hover{
+    background-color: green;
+    color: white;
+    border:0ch
+}
+.seudoelemento:hover::before{
+    content:"¡Hecho!";
+
+}
