@@ -7,17 +7,19 @@ body {
 }
 
 .btn-modern {
+    background-color:blue;
     padding: 1rem 3rem;
     font-size: 1.25rem;
     border: solid 1px transparent;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.4s ease;
+    
 }
 
 .btn-modern:hover{
     transform: translateY(-5px);
     background-color: green;
     color: white;
-    box-shadow: 0 5px 10px rgba(45, 206, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(100, 50, 150, 0.5);
 }
