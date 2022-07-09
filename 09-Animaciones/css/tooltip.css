@@ -4,9 +4,10 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh;    
 }
 .btn-tooltip{
+    position:relative;
     padding: 10px 20px;
     border-radius: 5px;
     border:none;
@@ -16,8 +17,7 @@ body{
     cursor:pointer;
 }
 .tooltip{
-    position:absolute;
-    /*visibility: hidden;*/
+    position:absolute;    /*visibility: hidden;*/
     opacity:0;
     top:-50px;
     left:-100%;
@@ -29,10 +29,25 @@ body{
     transition: opacity 150ms;
 }
 .btn-tooltip:hover{
-    background-color: rgb(0,100,0);
+    background-color: rgb(0, 100, 0);
 }
 .btn-tooltip:hover .tooltip{
     /*visibility: visible;*/
     opacity:1;
 }
+
+.tooltip::before{
+content:'';
+border: solid 10px transparent;
+border-top-color: #333;
+position:absolute;
+top:40px;
+left:50%;
+transform: translateX(-50%);
+}
+/*.triangulo{
+    border: solid 10px transparent;
+    border-top-color: #333;
+
+}*/
 
