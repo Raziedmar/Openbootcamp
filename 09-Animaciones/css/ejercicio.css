@@ -1,17 +1,10 @@
 
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .btn-modern {
     background-color:blue;
-    padding: 1rem 3rem;
-    font-size: 1.25rem;
+    padding: 1px 6px;
+    font-size: 30px;
     border: solid 1px transparent;
-    border-radius: 50px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 0.4s ease;
     
