@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    font-size: 2rem;
+}
+
+.barra {
+    background-color:burlywood;
+    color:darkslategray;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.principal {
+    padding: 10px;
+    flex-grow: 20;
+}
+
+@media (max-width: 640px) {
+    body {
+        flex-direction: column;
+    }
+    .barra {
+        flex-direction: row;
+        justify-content: space-around;
+        order: 2;
+    }
+}
