@@ -4,11 +4,10 @@
 - Modifica el Set original añadiendo el nombre "Javascript" (ya que empieza a formar parte de tu vida ;)*/
 
 const array = ["Amanda", "Lyanna", "Edmar"];
-const miSet = new Set(array);
+const set_familia = new Set(array);
 
-console.log(array);
-console.log(miSet);
-miSet.add("Edmar");
-console.log(miSet);
-miSet.add("Javascript");
-console.log(miSet);
+console.log(set_familia);
+set_familia.add("Edmar");
+console.log(set_familia);
+set_familia.add("Javascript");
+console.log(set_familia);
