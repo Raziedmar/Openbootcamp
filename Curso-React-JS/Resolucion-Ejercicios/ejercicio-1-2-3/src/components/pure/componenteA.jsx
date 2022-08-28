@@ -1,30 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Contacto } from '../../models/contacto.class';
 import ComponenteB from '../container/componenteB';
 
-const ComponenteA = () => {
-
-    const objeto = new Contacto("Mario", "Urquiza", "edmario84",true);
+const ComponenteA = ({contacto}) => {   
     
    
     return (
         <div>
             <h2>
-                Nombre : { objeto.nombre }
+                Nombre : { contacto.nombre }
             </h2>
             <h3>
-                Apellido: { objeto.apellido }
+                Apellido: { contacto.apellido }
             </h3>
             <h4>
-                Correo: { objeto.email }
+                Correo: { contacto.email }
             </h4>
             <h4>
-            <ComponenteB contact={objeto}></ComponenteB>
+            <ComponenteB estado={contacto.conectado}></ComponenteB>
             </h4>          
             
             
         </div>
     );}
+
+    ComponenteA.propTypes = {
+        contacto: PropTypes.instanceOf(Contacto),
+      };
 
 
 export default ComponenteA;

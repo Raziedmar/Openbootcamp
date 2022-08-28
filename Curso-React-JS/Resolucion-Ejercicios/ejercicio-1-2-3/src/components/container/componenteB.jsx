@@ -1,22 +1,25 @@
-import React from 'react';
+import React,{useState} from 'react';
 import PropTypes from 'prop-types';
-import { Contacto } from '../../models/contacto.class';
 
 
-const ComponenteB = ({contact}) => {
-   //const cambiar =() =>{
-    //    contact.conectado=false
-   //}
+const ComponenteB = (estado) => {
+   // Breve introducción al useState
+    // const[variable,método para actualizarla]=useState(valor inicial)
+    const [conectado, setConectado] = useState(estado);
+    const cambiar =() =>{
+        //actualizamos el state
+        setConectado(!conectado)
+    }
    
     return (
         <div>
             <h5>
-                Estado de conexión: { contact.conectado? "Contacto en Línea" : "Contacto No Disponible" }
+                Estado de conexión: { conectado===false? "Contacto No Diponible" : "Contacto en Línea" }
             </h5>
             <div>
-                {/*<button onClick={ cambiar }>
+                <button onClick={ cambiar }>
                 Cambiar Estado
-                </button>*/}
+                </button>
             </div>
             
         </div>
@@ -25,7 +28,7 @@ const ComponenteB = ({contact}) => {
 
 
 ComponenteB.propTypes = {
-    contact : PropTypes.instanceOf(Contacto)
+    estado : PropTypes.bool
 
 };
 
