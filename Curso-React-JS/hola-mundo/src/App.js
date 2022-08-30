@@ -3,6 +3,8 @@ import './App.css';
 import Greeting from './components/pure/greeting';
 import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list_component';
+import Ejemplo1 from './hooks/ejemplo1';
+import Ejemplo2 from './hooks/ejemplo2';
 
 function App() {
   return (
@@ -14,9 +16,10 @@ function App() {
         {/* Componente funcional GreetingF.jsx */} 
         <GreetingF name= "Mario"></GreetingF>
         <hr/>
+        <TaskListComponent></TaskListComponent>
         <hr/>
-        <hr/>
-        <TaskListComponent></TaskListComponent>  
+        <Ejemplo1></Ejemplo1>
+        <Ejemplo2></Ejemplo2>
       </header>
     </div>
   );

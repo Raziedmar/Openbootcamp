@@ -2,8 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import ComponenteA from './components/pure/componenteA';
 
-
 function App() {
+ 
   const objeto = {
     nombre: "Mario",
     apellido: "Urquiza",
