@@ -8,7 +8,7 @@ import React, { useState, useContext } from 'react';
 
 /**
  * 
- * @returns Componente
+ * @returns Componente 1
  * Dispone de un contexto que va atener un valor que recibe desde el padre
  */
 const miContexto = React.createContext(null)
@@ -37,11 +37,9 @@ const Componente2 = () => {
     const state = React.createContext(null)
     return (
         <div>
-        <h1>
-            El Token es: {state.token}
-        </h1>
-        <Componente2></Componente2>
-            
+        <h2>
+            El Token es: {state.sesion}
+        </h2>
         </div>
     );
 }
@@ -54,13 +52,13 @@ export default function MiComponenteConContexto(){
 
     //Creamos el estado de este componente
 
-    useState[sessionData, setSessionData] = useState(estadoInicial);
+    const[sessionData, setSessionData] = useState(estadoInicial);
 
     function actualizarSesion(){
         setSessionData(
             {
                 token:'JWT123456789',
-                session: sessionData.sesion +1
+                sesion: sessionData.sesion +1
             }
         )
     }
@@ -68,6 +66,7 @@ export default function MiComponenteConContexto(){
         <miContexto.Provider value={sessionData}>
         {/*Todo lo que esté aquí dentro puede leer los datos de session data*/}
         {/*Además, si se actualiza los componentes de aquí tambien lo actualizan */}
+        <h1>***Ejemplo de useState y useContext***</h1>
         <Componente1></Componente1>
         <button onClick={actualizarSesion}>Actualiza sesión</button>
         </miContexto.Provider>
